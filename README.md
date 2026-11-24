@@ -55,6 +55,13 @@ $ cat README_FIRST.txt
 
 first boot builds a ~2.3 G shader cache. plan for ~125 G free on an ssd.
 
+## why
+
+a new console every few years, a game locked to it, a price that eats a week of wages for a lot of people.
+this is for everyone who works all day and already has a pc that's good enough. nobody here gets paid. nothing is for sale.
+
+full history since the first recompiled function (march 2026): **[CHANGELOG.md](CHANGELOG.md)**
+
 ## repo layout
 
 ```

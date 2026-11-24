@@ -1,0 +1,43 @@
+/* leonida terminal theme, shared by the mirror pages */
+:root {
+  --bg: #000;
+  --fg: #b7c4b7;
+  --g: #39ff6a;
+  --dg: #1d7a35;
+  --r: #ff3b3b;
+  --y: #ffd23b;
+  --c: #5ad8ff;
+  --dim: #4d5a4d;
+}
+
+html { scrollbar-color: var(--dg) #000; scrollbar-width: thin; }
+::-webkit-scrollbar { width: 8px; height: 8px; background: #000; }
+::-webkit-scrollbar-thumb { background: var(--dg); border-radius: 999px; border: 2px solid #000; }
+::-webkit-scrollbar-thumb:hover { background: var(--g); }
+::-webkit-scrollbar-button { display: none; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font: 14px/1.55 "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, .35) 0 1px, transparent 1px 3px);
+}
+
+.g { color: var(--g); }
+.y { color: var(--y); }
+.r { color: var(--r); }
+.c { color: var(--c); }
+.d { color: var(--dim); }
+
+.status { white-space: pre; overflow-x: auto; }
+
+.post { border-left: 2px solid #1c241c; padding: 6px 0 10px 14px; margin: 0 0 14px; }
+.post.new { border-left-color: var(--g); }
+.post.rv { border-left-color: var(--r); }

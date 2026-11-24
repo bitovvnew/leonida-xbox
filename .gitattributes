@@ -1,0 +1,7 @@
+* text=auto eol=lf
+
+tools/** linguist-vendored=false linguist-detectable
+web/** linguist-vendored=false linguist-detectable
+scripts/** linguist-vendored=false linguist-detectable
+
+*.json linguist-generated

@@ -13,9 +13,15 @@
 
 ![build](https://img.shields.io/badge/build-a3f91c2-39ff6a?style=flat-square&labelColor=000)
 ![status](https://img.shields.io/badge/mirror%20%233-online-39ff6a?style=flat-square&labelColor=000)
-![compat](https://img.shields.io/badge/story-100%25-39ff6a?style=flat-square&labelColor=000)
-![xbox](https://img.shields.io/badge/xbox%20branch-58%25-ffd23b?style=flat-square&labelColor=000)
+![devlog](https://img.shields.io/badge/devlog-daily-39ff6a?style=flat-square&labelColor=000)
+![xbox](https://img.shields.io/badge/xbox%20branch-encrypted-ffd23b?style=flat-square&labelColor=000)
 ![drop](https://img.shields.io/badge/public%20drop-22.12.2026-ff3b3b?style=flat-square&labelColor=000)
+
+<br>
+
+[![open mirror](https://img.shields.io/badge/%E2%96%B6%20%20OPEN%20MIRROR-000000?style=for-the-badge&labelColor=000&color=39ff6a)](https://bitovvnew.github.io/leonida-xbox/)
+&nbsp;
+[![devlog](https://img.shields.io/badge/%E2%97%89%20%20LIVE%20DEVLOG-000000?style=for-the-badge&labelColor=000&color=1d7a35)](https://bitovvnew.github.io/leonida-xbox/#devlog)
 
 </div>
 

@@ -34,9 +34,9 @@ $ cat README_FIRST.txt
 > [!WARNING]
 > mirror #2 is down after a takedown request. mirror #3 is still up. **the link is on the site, not here.**
 
-## bench
+## target fps @ public drop
 
-`--scene=vice_beach_night_rain --len=600s` · 412 rigs reported · frame-gen on where available
+`--scene=vice_beach_night_rain --len=600s` · targets for the drop build · frame-gen on where available
 
 | cpu | gpu | res | avg | 1% low |
 |---|---|---|---:|---:|
@@ -51,14 +51,7 @@ $ cat README_FIRST.txt
 
 ## status
 
-```
-boot / menus           ■■■■■■■■■■■■■■■■■■■■ 100%
-story ch1-ch4          ■■■■■■■■■■■■■■■■■■■■ 100%
-open world streaming   ■■■■■■■■■■■■■■■■■■■· 97%
-radio + audio          ■■■■■■■■■■■■■■■■■■■· 94%
-online p2p             ■■■■■■■■■■■■■■······ 71%
-xbox branch            ■■■■■■■■■■■■········ 58%
-```
+live progress bars are on the site and move with every devlog entry.
 
 ## tree
 

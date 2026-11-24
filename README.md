@@ -40,6 +40,38 @@ $ cat README_FIRST.txt
 > [!WARNING]
 > mirror #2 is down after a takedown request. mirror #3 is still up. **the link is on the site, not here.**
 
+## build weight
+
+| part | packed | unpacked | chunks |
+|---|---:|---:|---:|
+| `data/vice_beach_streaming.rpf` | 14.2 G | 31.8 G | 128 |
+| `data/leonida_world_00.rpf` | 9.8 G | 22.4 G | 89 |
+| `data/audio_radio_all.rpf` | 6.1 G | 9.3 G | 56 |
+| `data/peds_vehicles_hi.rpf` | 4.4 G | 11.7 G | 40 |
+| `data/cutscenes_ch1-ch4.rpf` | 2.9 G | 4.0 G | 27 |
+| `bin/` | 291 M | 291 M | 3 |
+| `xbox_branch/` | 3.9 G | ? | 45 |
+| **total** | **41.7 G** | **~80 G** | **388** |
+
+first boot builds a ~2.3 G shader cache. plan for ~125 G free on an ssd.
+
+## repo layout
+
+```
+.
+├── index.html                 mirror page
+├── posts.json                 devlog, appended daily by ci
+├── vault.json                 sealed devlog entries
+├── scripts/unlock.mjs         ci: unseals the day's entry
+├── web/src/devlog.ts          devlog types + loader
+├── web/src/StatusBars.tsx     status bars component
+├── web/styles/terminal.css    shared terminal theme
+├── tools/manifest/            rust: size manifest of a pulled build
+├── tools/pak/paksize.go       go: per-pak sizes
+├── tools/bench/frametimes.py  python: avg / 1% low from captures
+└── tools/verify.sh            sha256 check before first launch
+```
+
 ## target fps @ public drop
 
 `--scene=vice_beach_night_rain --len=600s` · targets for the drop build · frame-gen on where available

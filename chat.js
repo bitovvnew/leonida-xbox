@@ -52,6 +52,7 @@
       other: R(NAMES.filter(n => n !== speaker)), place: R(PLACES), thing: R(THINGS),
       peers: (typeof peers !== 'undefined' ? peers : 4800).toLocaleString('en-US'),
       story: L.s?.story ?? 0, online: L.s?.online ?? 0,
+      now: new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }).toLowerCase(),
     };
   }
   const fill = (t, c) => t.replace(/\{(\w+)\}/g, (_, k) => (k === 'plan' ? fill(R(PLANS), c) : c[k] ?? ''));
@@ -125,7 +126,7 @@
       a: ['recompiles console code to x86 ahead of time', 'turns console gpu commands into vulkan calls', 'shader cache build, ~6 min, only once',
           'physics step was tied to framerate, they interpolate now', 'read the changelog, it\'s all there', 'prism is the gpu bridge, hyperion is the cpu side'],
       r: ['makes sense', 'ty', 'smart', 'learned something', 'wild that it works at all', 'ok i get it now'] },
-    { w: 5, o: ['it\'s 3am and i\'m refreshing a devlog', 'my boss thinks i\'m working', 'back from work, what did i miss', 'gm', 'gn chat', 'anyone else not sleeping',
+    { w: 5, o: ['it\'s {now} and i\'m refreshing a devlog', 'my boss thinks i\'m working', 'back from work, what did i miss', 'gm', 'gn chat', 'anyone else not sleeping',
           'night shift gang', 'lunch break check-in'],
       a: ['same lol', 'nothing, same as yesterday', 'today\'s post is up', 'gm', 'go to sleep', 'day {day} of this', '{other} has been here all night', 'welcome back',
           'you missed {other} arguing about fps for an hour', 'just {thing} talk, the usual', 'quick_resume went up to {dec}%', 'chat\'s been quiet, everyone waiting for 00:07',

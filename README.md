@@ -37,6 +37,10 @@ $ cat README_FIRST.txt
   public drop       22.12.2026 18:00 UTC  (patched launcher + xbox branch)
 ```
 
+> [!NOTE]
+> **this repo is the public mirror page + helper scripts. it was opened on 24.11 together with mirror #3.**
+> the toolchain itself (hyperion recompiler, prism gpu bridge, tide audio) lives in a private repo and stays there until the drop. don't ask for access.
+
 > [!WARNING]
 > mirror #2 is down after a takedown request. mirror #3 is still up. **the link is on the site, not here.**
 
@@ -60,7 +64,7 @@ first boot builds a ~2.3 G shader cache. plan for ~125 G free on an ssd.
 a new console every few years, a game locked to it, a price that eats a week of wages for a lot of people.
 this is for everyone who works all day and already has a pc that's good enough. nobody here gets paid. nothing is for sale.
 
-full history since the first recompiled function (march 2026): **[CHANGELOG.md](CHANGELOG.md)**
+toolchain history since the first recompiled function (march 2026, private repo): **[CHANGELOG.md](CHANGELOG.md)**
 
 ## repo layout
 
@@ -79,20 +83,22 @@ full history since the first recompiled function (march 2026): **[CHANGELOG.md](
 └── tools/verify.sh            sha256 check before first launch
 ```
 
-## target fps @ public drop
+## expected fps @ public drop
 
-`--scene=vice_beach_night_rain --len=600s` · targets for the drop build · frame-gen on where available
+`--scene=vice_beach_night_rain --len=600s` · unoptimized dev build · no frame-gen
+
+it's a debug build of an unreleased game running through a recompiler. it is not going to run like a finished pc port.
 
 | cpu | gpu | res | avg | 1% low |
 |---|---|---|---:|---:|
-| r5 3600 | gtx 1660s | 1080p low | 48 | 39 |
-| i5-12400f | rtx 3060 12g | 1080p high | 72 | 58 |
-| r5 7600 | rx 7700 xt | 1440p high | 81 | 66 |
-| i5-13600k | rtx 4070 | 1440p ultra | **96** | 79 |
-| r7 7700x | rx 7800 xt | 1440p ultra | 92 | 74 |
-| r7 7800x3d | rtx 4080s | 2160p ultra | 88 | 71 |
-| r9 9950x3d | rtx 5090 | 2160p pt | **144** | 118 |
-| steam deck | rdna2 8cu | 800p low | 34 | 27 |
+| r5 3600 | gtx 1660s | 1080p low | 24 | 17 |
+| i5-12400f | rtx 3060 12g | 1080p high | 31 | 22 |
+| r5 7600 | rx 7700 xt | 1440p high | 34 | 24 |
+| i5-13600k | rtx 4070 | 1440p ultra | **41** | 29 |
+| r7 7700x | rx 7800 xt | 1440p ultra | 38 | 26 |
+| r7 7800x3d | rtx 4080s | 2160p ultra | 36 | 25 |
+| r9 9950x3d | rtx 5090 | 2160p pt | **58** | 41 |
+| steam deck | rdna2 8cu | 800p low | 14 | 9 |
 
 ## status
 

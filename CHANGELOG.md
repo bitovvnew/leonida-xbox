@@ -1,5 +1,7 @@
 # changelog
 
+toolchain log, mirrored from the private repo. this public repo only holds the mirror page and helper scripts.
+
 ```
 $ git log --reverse --format="%ad  %s" --date=short leonida/toolchain
 ```
@@ -13,17 +15,17 @@ nobody here gets paid. nothing is for sale. the toolchain is the point: one day 
 ---
 
 ## 0.9.0 — 2026-11-24
-- mirror #3 up, devlog started (day 01)
+- mirror #3 up, public repo opened, devlog started (day 01)
 - signed sha256 manifest for the dump, 9/9 mirrors
-- `tools/verify.sh` for checking a pull before first launch
+- helper scripts published in the public repo (`tools/`)
 
 ## 0.8.0 — 2026-11-19
 - the dump arrived. 41.7G across 388 chunks
-- `tools/manifest` (rust) and `tools/pak/paksize.go` to map what's inside
+- size/manifest helpers to map what's inside
 - pak index reader handles the new streaming layout
 
 ## 0.7.0 — 2026-11-02
-- frame interpolation (neural upscale) prototype: +55–70% on 30/40-series
+- frame interpolation prototype. unstable, disabled by default
 - fixed sim step + interpolation, physics no longer tied to framerate
 
 ## 0.6.0 — 2026-10-11

@@ -102,7 +102,7 @@ th{color:var(--dim);font-weight:400}
 <h2>status</h2>
 <pre id="stat"></pre>
 
-<h2 id="history">git log --reverse leonida/toolchain</h2>
+<h2 id="history">git log --reverse leonida/toolchain <span class="d">(private repo)</span></h2>
 <p style="margin-bottom:10px">a new console every few years, a game locked to it, a price that eats a week of wages.<br>
 this is for everyone who works all day and already has a pc that's good enough. <span class="d">nobody here gets paid. nothing is for sale.</span></p>
 <pre id="hist"><span class="d">2026-03-02</span>  <span class="c">0.1.0</span>  hyperion: first function recompiled from a console test binary
@@ -119,9 +119,9 @@ this is for everyone who works all day and already has a pc that's good enough. 
 <div class="scroll"><table id="tree"></table></div>
 <p class="d" style="margin-top:8px">sha256 manifest signed · mirrors in sync</p>
 
-<h2 id="bench">target fps @ public drop</h2>
+<h2 id="bench">expected fps @ public drop</h2>
 <div class="scroll"><table id="benchT"></table></div>
-<p class="d" style="margin-top:8px">targets for the drop build · vice_beach_night_rain, 600s · frame-gen on where available</p>
+<p class="d" style="margin-top:8px">unoptimized dev build, no frame-gen · vice_beach_night_rain, 600s · it's a debug build of an unreleased game. don't expect miracles</p>
 <p style="margin-top:10px">your box: <span class="c" id="gpu">probing…</span></p>
 
 <h2>tail -f #leonida-dev</h2>
@@ -217,13 +217,14 @@ function renderTree(){
 loadPosts();
 
 /* bench */
-const rigs=[['r5 3600','gtx 1660s','1080p low',48,39],['i5-12400f','rtx 3060 12g','1080p high',72,58],['r5 7600','rx 7700 xt','1440p high',81,66],
- ['i5-13600k','rtx 4070','1440p ultra',96,79],['r7 7700x','rx 7800 xt','1440p ultra',92,74],['r7 7800x3d','rtx 4080s','2160p ultra',88,71],
- ['r9 9950x3d','rtx 5090','2160p pt',144,118],['steam deck','rdna2 8cu','800p low',34,27]];
-const bar=v=>'█'.repeat(Math.round(v/8))+'░'.repeat(Math.max(0,18-Math.round(v/8)));
+const rigs=[['r5 3600','gtx 1660s','1080p low',24,17],['i5-12400f','rtx 3060 12g','1080p high',31,22],['r5 7600','rx 7700 xt','1440p high',34,24],
+ ['i5-13600k','rtx 4070','1440p ultra',41,29],['r7 7700x','rx 7800 xt','1440p ultra',38,26],['r7 7800x3d','rtx 4080s','2160p ultra',36,25],
+ ['r9 9950x3d','rtx 5090','2160p pt',58,41],['steam deck','rdna2 8cu','800p low',14,9]];
+const bar=v=>'█'.repeat(Math.round(v/4))+'░'.repeat(Math.max(0,16-Math.round(v/4)));
+const tone=v=>v>=40?'g':v>=25?'y':'r';
 $('benchT').innerHTML='<tr><th>cpu</th><th>gpu</th><th>res</th><th>avg</th><th>1%</th><th></th></tr>'+rigs.map(r=>
- `<tr><td>${r[0]}</td><td>${r[1]}</td><td class="d">${r[2]}</td><td class="${r[3]>=60?'g':'y'}">${r[3]}</td><td class="d">${r[4]}</td><td class="${r[3]>=60?'g':'y'}">${bar(r[3])}</td></tr>`).join('');
-$('gpu').innerHTML=`${esc(gpu)} → est. <span class="g">${Math.round(rnd(58,112))} fps</span> @1440p <span class="g">[compatible]</span>`;
+ `<tr><td>${r[0]}</td><td>${r[1]}</td><td class="d">${r[2]}</td><td class="${tone(r[3])}">${r[3]}</td><td class="d">${r[4]}</td><td class="${tone(r[3])}">${bar(r[3])}</td></tr>`).join('');
+$('gpu').innerHTML=`${esc(gpu)} → est. <span class="y">${Math.round(rnd(24,42))} fps</span> @1440p <span class="d">[unoptimized dev build]</span>`;
 
 /* live bits */
 let peers=4812;const drop=new Date('2026-12-22T18:00:00Z');

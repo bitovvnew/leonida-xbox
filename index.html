@@ -234,13 +234,6 @@ setInterval(()=>{
  if(!revealed)$('cd').textContent=`${Math.floor(t/86400)}d ${p(t%86400/3600)}h ${p(t%3600/60)}m ${p(t%60)}s`;
  $('sync').textContent=Math.floor(rnd(2,59))+'s ago';
 },1000);
-const msgs=[['n0va','refreshing this page every hour lmao'],['k3rnel','shader cache first boot is long, just wait'],['vx','stop asking for the magnet. 22.12'],
- ['ghost_77','rx 6700xt here, can test when it drops'],['admin','do not repost devlog screenshots without the mirror link'],['bitflip','mirror #3 holding'],
- ['n0va','the bar post was insane'],['vx','xbox branch is the real prize, wait for it']];
-let mi=0;
-setInterval(()=>{const [u,m]=msgs[mi++%msgs.length],t=new Date().toTimeString().slice(0,5);
- $('chat').insertAdjacentHTML('beforeend',`<div><span class="d">${t}</span> <span class="${u==='admin'?'r':'c'}">&lt;${u}&gt;</span> ${m}</div>`);
- while($('chat').children.length>8)$('chat').firstChild.remove();},2400);
 
 /* shell */
 $('in').addEventListener('keydown',e=>{
@@ -272,5 +265,6 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-dl]'))run()});
 $('shame').onclick=()=>$('gotcha').classList.remove('on');
 $('share').onclick=async()=>{try{await navigator.clipboard.writeText(location.href)}catch(e){}$('toast').style.display='block';setTimeout(()=>$('toast').style.display='none',2000)};
 </script>
+<script src="chat.js"></script>
 </body>
 </html>

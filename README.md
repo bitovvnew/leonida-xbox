@@ -80,15 +80,17 @@ leonida_pc_dev/
 └── SHA256SUMS
 ```
 
-## get it
+## devlog
 
-**→ open the site (github pages link in the sidebar) and pull the build from there.**
+new entry every day until the drop. **→ the site (github pages link in the sidebar).**
+
+`xbox_branch/quick_resume_proto.bin` is still encrypted. progress is in the devlog.
 
 ---
 
 <details>
 <summary><sub>fine print</sub></summary>
 
-<sub>parody / prank. not affiliated with rockstar games or take-two interactive. there is no build, no emulator and no download. the site collects nothing. if you got here looking for a pirated copy, go buy the game.</sub>
+<sub>not affiliated with rockstar games or take-two interactive. parody. nothing is downloaded or collected.</sub>
 
 </details>

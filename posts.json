@@ -1,0 +1,17 @@
+[
+ {
+  "date": "2026-11-24",
+  "time": "03:12",
+  "title": "mirror is up",
+  "body": "dump verified against the signed manifest. 41.7G, 9 of 9 mirrors in sync. leonida_x64.exe boots to a black screen with menu audio playing. that's further than anyone expected. we'll post every day until the public drop.",
+  "s": {
+   "boot": 20,
+   "story": 0,
+   "world": 0,
+   "audio": 10,
+   "online": 0,
+   "xbox": 0
+  },
+  "dec": 3
+ }
+]

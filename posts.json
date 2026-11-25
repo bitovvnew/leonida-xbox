@@ -13,5 +13,20 @@
    "xbox": 0
   },
   "dec": 3
+ },
+ {
+  "date": "2026-11-25",
+  "time": "02:47",
+  "title": "first frame",
+  "body": "splash and legal screens render. prism bridge dies after ~40s on a descriptor heap overflow. raised the heap limit, now it dies after ~90s. progress.",
+  "s": {
+   "boot": 35,
+   "story": 0,
+   "world": 0,
+   "audio": 10,
+   "online": 0,
+   "xbox": 0
+  },
+  "dec": 5
  }
 ]

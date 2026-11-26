@@ -28,5 +28,20 @@
    "xbox": 0
   },
   "dec": 5
+ },
+ {
+  "date": "2026-11-26",
+  "time": "04:03",
+  "title": "main menu",
+  "body": "main menu renders at a locked 30. controller input works through an xinput shim, keyboard does not. menu music is the full track, not a loop.",
+  "s": {
+   "boot": 55,
+   "story": 0,
+   "world": 0,
+   "audio": 15,
+   "online": 0,
+   "xbox": 0
+  },
+  "dec": 6
  }
 ]

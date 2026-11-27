@@ -43,5 +43,20 @@
    "xbox": 0
   },
   "dec": 6
+ },
+ {
+  "date": "2026-11-27",
+  "time": "01:58",
+  "title": "shader cache",
+  "body": "18,204 shaders pulled out of the pipeline cache. async compile in. first boot takes about 6 minutes, after that menus are instant.",
+  "s": {
+   "boot": 70,
+   "story": 0,
+   "world": 0,
+   "audio": 15,
+   "online": 0,
+   "xbox": 0
+  },
+  "dec": 8
  }
 ]

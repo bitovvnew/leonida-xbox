@@ -58,5 +58,20 @@
    "xbox": 0
   },
   "dec": 8
+ },
+ {
+  "date": "2026-11-28",
+  "time": "03:40",
+  "title": "into the world",
+  "body": "'continue' now loads into the world. character spawns in a grey void, collision works, walked about 200m before the streamer gave up. no textures yet.",
+  "s": {
+   "boot": 85,
+   "story": 0,
+   "world": 8,
+   "audio": 15,
+   "online": 0,
+   "xbox": 0
+  },
+  "dec": 9
  }
 ]
